@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>India Covid 19 Live</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="javascript/indialive.js"></script>
+  </head>
+
+  <body onload="fetch()">
+
+    <!-- NAVIGATION BAR -->
+    <!-- <nav class="navbar navbar-expand-lg nav_style"> -->
+    <nav class="navbar sticky-top navbar-light navbar-expand-lg nav_style" style="background-color: #563d7c; position: sticky;">
+      <a class="navbar-brand pl-5" href="#">
+        <img src="images/india.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
+        <em>INDIA COVID 19 LIVE </em>
+      </a>
+      <button class="navbar-toggler nav_button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto pr-5 text-capitalize">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutid">second Wave</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#symptomid">Triple Mutant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#preventionid">Vaccine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="worldlive.html">worldwideLive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactid">register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADING -->
+    <div class="main_header">
+      <div class="row w-100 h-100">
+        <div class="col-lg-5 col-md-5 col-12 order-lg-1 order-2">
+          <div class="leftside w-100 h-100 d-flex justify-content-center align-items-center"> 
+            <img src="images/covid_warrior.png" width="300" height="300">
+          </div>
+        </div>
+    
+        <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+          <div class="rightside w-100 h-100 d-flex justify-content-center align-items-center">
+            <h1 id="myid"> Let's Stay Safe & Fight Together Against
+              Cor<span class="corona_rot"><img src="images/corona2.png" width="50" height="50"></span>na Virus
+            </h1>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDIA CORONA LIVE UPDATE  -->
+    <section class="corona_update">
+      <div class="mb-3">
+        <h3 class="text-center text-uppercase">Covid-19 Live Updates Around The World</h3>
+      </div>
+
+      <div class="d-flex justify-content-around align-items-center pt-3 count"> 
+        <div>
+          <h1 id="count1"></h1>
+          <p class="corona_india">Total Confirmed</p>
+        </div>
+    
+        <div>
+          <h1 id="count2"></h1>
+          <p class="corona_india">Total Active</p>
+        </div>
+
+        <div>
+          <h1 id="count3"></h1>
+          <p class="corona_india">Total Recovered</p>
+        </div>
+    
+        <div>
+          <h1 id="count4"></h1>
+          <p class="corona_india">Total Deaths</p>
+        </div>
+      </div>  
+  
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center" id="tbval">
+          <tr>
+            <th>Last update time</th>
+            <th>State</th>
+            <th>Confirmed</th>
+            <th>Active</th>
+            <th>Recovered</th>
+            <th>Deaths</th>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECOND WAVE INDIA -->
+    <div class="container-fluid sub_section pt-5 pb-5" id="aboutid"> 
+      <div class="section_header text-center mb-5 mt-4">
+        <h1>Corona Virus In India</h1>
+      </div>
+  
+      <div class="row pt-5">
+        <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+          <img src="images/second_wave.jpeg" class="img-fluid">
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12 about_res2">
+          <h2>Second Wave In India </h2>
+          <p>India's battle with a second wave of COVID-19 is making headlines with record-breaking daily cases and a rising death toll. The country recently surpassed more than 379,000 new COVID-19 cases in a single day, the biggest total recorded globally since the pandemic began.</p>
+          <p>As states begin cautiously calibrating how to unwind their lockdowns beginning June, they face a double challenge. Key indicators show that industry and business activities may not be as adversely hit by the second Covid wave as they were by a national lockdown last year, but they are still very vulnerable given the low vaccination levels among the larger, younger population.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRIPLE MUTANT -->
+    <div class="container-fluid pt-5 pb-5" id="symptomid">
+      <div class="section_header text-center mb-5 mt-4">
+        <h1>Triple Mutant</h1>
+      </div>
+  
+      <div class="row pt-5">
+        <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+          <img src="images/triple_mutant.jpeg" class="img-fluid">
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12 about_res2">
+          <h2>What Is Triple Mutant Virus? </h2>
+          <p>Some experts are pointing to the "triple mutant strain" or "triple mutant variant" of coronavirus as one possible reason for the uptick in India's cases. While the term may sound scary, it's simply another strain among many throughout the COVID-19 pandemic. Viruses are constantly changing through mutations, and variants have been emerging from the very beginning of the pandemic. This B.1.617 variant is now classified as a "variant of concern" by the World Health Organization (WHO) and a "variant of interest," according to the Centers for Disease Control and Prevention.</p>
+          <p>The WHO said last week it was closely following at least 10 coronavirus variants across the world, including the B.1.617. The variant was previously labeled a “variant of interest” as more studies were needed to completely understand its significance, Van Kerkhove said.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VACCINE -->
+    <div class="container-fluid sub_section pt-5 pb-5" id="preventionid">
+  
+      <div class="section_header text-center mb-5 mt-4">
+        <h1>Vaccination Drive In India</h1>
+      </div>
+  
+      <div class="row pt-5">
+        <div class="col-lg-5 col-md-6 col-12 ml-5 about_res">
+          <img src="images/vaccine_drive.jpeg" class="img-fluid">
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12 about_res2">
+          <h2>Vaccines </h2>
+          <p>India will have nearly 120 million doses of coronavirus vaccines available for domestic use in the month of June, the government said on Sunday, in a boost to its immunisation campaign that has been marred by shortages of jabs.</p>
+          <p>This marks a significant jump from the 79.4 million doses that were available in May amid the devastating second wave that has killed more than 150,000 people in the past eight weeks.</p>
+          <p>The vaccine is developed using Whole-Virion Inactivated Vero Cell derived platform technology. Inactivated vaccines do not replicate and are therefore unlikely to revert and cause pathological effects. They contain dead virus, incapable of infecting people but still able to instruct the immune system to mount a defensive reaction against an infection.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- REGISTERATION FORM -->
+    <div class="container-fluid pt-5 pb-5" id="contactid">
+  
+      <div class="section_header text-center mb-5 mt-4">
+        <h1> Vaccine Registration Form</h1>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-12">
+            <form action="/" method="POST">
+            
+              <!-- NAME SECTION -->
+              <h6 class="form-row" id="note">NOTE: Mention your name as in Aadhar</h6>
+              <div class="form-row">
+                <div class="form-group col-md-6" style="padding-left: 0px;">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" name="fname"  placeholder="Enter your name first name" autocomplete="off" required>
+                </div>
+    
+                <div class="form-group col-md-6">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" name="lname"  placeholder="Enter your name last name" autocomplete="off" required>
+                </div>
+              </div>
+  
+              <!-- MOBILE & AADHAR SECTION -->
+              <div class="form-row input-icons">
+                <div class="form-group col-md-6" style="padding-left: 0px;">
+                  <label>Mobile Number</label>
+                  <i class="fa fa-mobile"></i>
+                  <input type="number" class="form-control" name="mobile"  placeholder="Enter 10 digits mobile number" autocomplete="off" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "10" required >
+                </div> 
+                <div class="form-group col-md-6">
+                  <label for="exampleFormControlInput1">Aadhar Number </label>
+                  <i class="fa fa-id-card-o"></i>
+                  <input type="text" class="form-control" name="aadhar" id="tbNum"  placeholder="XXXX-XXXX-XXXX" autocomplete="off" onkeypress="addHyphen(this)" oninput="validation()" maxlength="14" required>
+                </div>
+              </div>
+
+              <!-- ADDRESS SECTION -->
+              <div class="form-row">
+                <div class="form-group col-md-12" style="padding-left: 0px;">  
+                  <label for="inputAddress">Address</label>
+                  <i class="fa fa-home"></i>
+                  <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St" required>
+                </div>
+              </div>
+
+              <!-- CITY STATE PINCODE SECTION -->
+              <div class="form-row">
+                <div class="form-group col-md-4" style="padding-left: 0px;">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" name="city" id="inputCity" placeholder="Ex- Lucknow" required>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select class="form-control" id="inputState" name="state"  required>
+                    <option value="">Choose...</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option> 
+                    <option value="Chhattisgarh">Chhattisgarh</option>>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana"> Haryana</option>
+                    <option value="Himachal Pradesh"> Himachal Pradesh</option>
+                    <option value="Jharkhand"> Jharkhand</option>
+                    <option value="Karnataka"> Karnataka</option>
+                    <option value="Kerala">  Kerala</option>
+                    <option value="Madhya Pradesh">  Madhya Pradesh</option>
+                    <option value="Maharashtra">  Maharashtra</option>
+                    <option value="Manipur"> Manipur</option>
+                    <option value="Meghalaya"> Meghalaya</option>
+                    <option value="Mizoram"> Mizoram</option>
+                    <option value="Nagaland"> Nagaland</option>
+                    <option value="Odisha"> Odisha</option>
+                    <option value="Punjab"> Punjab </option>
+                    <option value="Rajasthan">  Rajasthan</option>
+                    <option value="Sikkim"> Sikkim</option>
+                    <option value="Tamil Nadu"> Tamil Nadu</option>
+                    <option value="Telangana"> Telangana </option>
+                    <option value="Tripura"> Tripura</option>
+                    <option value="Uttarakhand"> Uttarakhand</option>
+                    <option value="Uttar Pradesh"> Uttar Pradesh </option>
+                    <option value="West Bengal"> West Bengal</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputZip">Pincode</label>
+                  <input type="number" class="form-control" name="pincode" id="inputZip" placeholder="Ex- 400001" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "6" required>
+                </div>
+              </div>
+
+              <!-- GENDER AGE DOSE SECTION -->
+              <div class="form-row">
+                <div class="form-group col-md-4" style="padding-left: 0px;">
+                  <label for="inputGender">Gender</label>
+                  <select class="form-control" id="inputGender" name="gender" required>
+                    <option value="">Choose...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="trans">Trans</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label" for="inputAge">Age</label>
+                  <input type="number" class="form-control" name="age" id="inputAge" min="1" max="125" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3"  required style="margin-top: 8px;">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputDose">Select Dose</label>
+                  <select id="inputDose" name="dose" class="form-control" required>
+                    <option value="">Choose...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+  
+              <!-- SELECT VACCINE SECTION -->
+              <div class="form-row">
+                <div class="form-group col-md-3" style="padding-left: 0px;">
+                  <label class="form-label">Select Vaccine:</label>
+                </div>
+                <div class="form-group col-md-5">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding-left: 0px;">
+                    <label class="btn btn-sm btn-outline-info">
+                      <input type="radio" name="vaccine" id="option1" autocomplete="off" value="SPUTNIK V" required="required"> SPUTNIK V
+                    </label>
+                    <label class="btn btn-sm btn-outline-primary active">
+                      <input type="radio" name="vaccine" id="option2" autocomplete="off" value="COVAXIN" required="required"> COVAXIN
+                    </label>
+                    <label class="btn btn-sm btn-outline-success">
+                      <input type="radio" name="vaccine" id="option3" autocomplete="off" value="COVISHIELD" required="required"> COVISHIELD
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BOOK SLOT SECTION -->
+              <div class="form-row">
+                <div class="form-group col-md-3" style="padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
+                  <label class="form-label">Book Slot:</label>
+                </div>
+                <div class="form-group col-md-4" style="padding-left: 5px;">
+                  <input class="form-control" type="date" name="slot" value="" id="date" required>
+                </div>  
+              </div>
+
+              <!-- HEALTH PROBLEM SECTION -->
+              <div class="form-row">
+                <div class="form-group col-md-12" style="padding-left: 0px;">
+                  <label for="exampleFormControlTextarea6">Health Problem, If Any, Mention Here:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea6" name="message" placeholder="Diabetes, Blood Pressure, Asthma etc.." default="N/A"></textarea>
+                </div>
+              </div>
+              <!-- SUBMIT/RESET BUTTON -->
+              <input type="submit" class="btn btn-success" value="Submit" name="submit">
+              <input class="btn btn-dark" type="reset" value="Reset">
+            </form>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <!-- TOP CURSOR -->
+    <div class="container scrolltop float-right pr-5">
+      <i class="fa fa-arrow-up" id="myBtn" onclick="topFunction()"> </i>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-5">
+      <div class="footer_style text-white text-center container-fluid">
+        <p> Copyright by Sahil </p>
+      </div>
+    </footer>
+
+    <script>
+      mybutton = document.getElementById("myBtn");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() 
+{
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) 
+    {
+        mybutton.style.display = "block";
+    } 
+    else 
+    {
+        mybutton.style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() 
+{
+    document.body.scrollTop = 0; //For Safari
+    document.documentElement.scrollTop = 0; //For Chrome,Firefox,IE and Opera
+}
+    </script>
+
+  </body>
+</html>
